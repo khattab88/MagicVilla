@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Models
+{
+    public class RefreshToken
+    {
+        [Key]
+        public int Id { get; set; }
+        public string UserId { get; set; }
+        public string JwtTokenId { get; set; }
+        public string Token { get; set; }
+        // make sure refresh token is valid only for one use
+        public bool IsValid { get; set; }
+        public DateTime ExpiresAt { get; set; }
+    }
+}
