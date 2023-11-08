@@ -178,7 +178,7 @@ else
         opt.SwaggerEndpoint("/swagger/v2/swagger.json", "MagicVillaV2");
 
         // used for production 
-        // opt.RoutePrefix = "";
+        opt.RoutePrefix = "";
     });
 }
 
